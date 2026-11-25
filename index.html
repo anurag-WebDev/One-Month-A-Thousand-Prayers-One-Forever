@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#70283f">
+  <meta name="description" content="One Month, A Thousand Prayers, One Forever — a letter written with love on 25 November 2026.">
+  <title>One Month, A Thousand Prayers, One Forever</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:#faf6f2; --paper-deep:#f2e9e2; --ink:#382f30; --muted:#766767;
+      --maroon:#70283f; --maroon-dark:#552033; --maroon-soft:#8d5362;
+      --rose:#b77b83; --gold:#b18a58; --line:rgba(112,40,63,.17);
+      --glass:#fffaf6; --shadow:0 14px 38px rgba(65,39,43,.08);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; color:var(--ink); font-family:"DM Sans",sans-serif; line-height:1.9;
+      background:
+        radial-gradient(ellipse at 50% -10%,rgba(112,40,63,.05),transparent 42rem),
+        radial-gradient(circle at 3% 36%,rgba(177,138,88,.045),transparent 24rem),
+        radial-gradient(circle at 97% 70%,rgba(141,83,98,.04),transparent 26rem),
+        var(--paper);
+    }
+    .wrap { width:min(820px,calc(100% - 34px)); margin:0 auto; }
+    .hero {
+      min-height:78vh; display:grid; place-items:center; padding:78px 0 64px;
+      text-align:center; position:relative; isolation:isolate; overflow:hidden;
+    }
+    .hero:before,.hero:after {
+      content:""; position:absolute; z-index:-1; border:1px solid rgba(112,40,63,.10);
+      border-radius:50%; width:min(82vw,700px); aspect-ratio:1; left:50%; top:50%;
+      transform:translate(-50%,-48%);
+    }
+    .hero:after { width:min(66vw,560px); border-color:rgba(177,138,88,.14); }
+    .hero-inner { max-width:710px; }
+    .pill {
+      display:inline-block; padding:9px 17px; border:1px solid rgba(112,40,63,.25);
+      border-radius:999px; color:var(--maroon); background:rgba(255,250,246,.75);
+      font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
+    }
+    h1,h2 { font-family:"Playfair Display",Georgia,serif; font-weight:600; }
+    h1 {
+      font-size:clamp(2.65rem,8.2vw,5.6rem); line-height:1.05; letter-spacing:-.045em;
+      margin:28px 0 20px; color:var(--maroon-dark);
+    }
+    .hero p { color:var(--muted); font-size:1.04rem; max-width:590px; margin:0 auto; }
+    .date { margin-top:30px; color:var(--maroon); font-size:.88rem; font-weight:700; letter-spacing:.2em; }
+    .heart { color:var(--maroon-soft); font-size:1.7rem; margin-top:17px; }
+    .scroll { margin-top:40px; color:#8c7b78; text-transform:uppercase; letter-spacing:.17em; font-size:.68rem; }
+    .scroll span { display:block; font-size:1.25rem; margin-top:6px; color:var(--maroon); }
+    main { padding-bottom:86px; }
+    .letter {
+      position:relative; overflow:hidden; padding:clamp(27px,6vw,58px);
+      margin:0 auto 24px; border:1px solid rgba(112,40,63,.12);
+      border-radius:25px; background:rgba(255,253,250,.98);
+      box-shadow:var(--shadow);
+    }
+    .letter:before {
+      content:""; position:absolute; width:230px; height:230px; border-radius:50%;
+      right:-145px; top:-155px; pointer-events:none;
+      background:radial-gradient(circle,rgba(112,40,63,.075),transparent 70%);
+    }
+    .letter:nth-of-type(even) { background:rgba(255,250,247,.99); }
+    .chapter-number {
+      position:absolute; top:20px; right:25px; font-family:"Playfair Display",Georgia,serif;
+      color:rgba(112,40,63,.50); font-size:1.1rem; letter-spacing:.12em;
+      border:1px solid rgba(112,40,63,.20); border-radius:50%; width:38px; height:38px;
+      display:grid; place-items:center;
+    }
+    .eyebrow {
+      color:var(--maroon); text-transform:uppercase; letter-spacing:.18em;
+      font-size:.68rem; font-weight:700; margin:0 52px 13px 0;
+    }
+    h2 { color:var(--maroon-dark); font-size:clamp(1.7rem,4.8vw,2.45rem); line-height:1.23; margin:0 0 26px; }
+    .letter-copy { position:relative; z-index:1; }
+    .letter-copy p { margin:0 0 21px; color:#413637; }
+    .letter-copy p:last-child { margin-bottom:0; }
+    .letter-greeting { font-family:"Playfair Display",Georgia,serif; color:var(--maroon) !important; font-size:1.55rem; margin-bottom:25px !important; }
+    .source-milestone {
+      margin:30px 0; padding:23px 18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+      text-align:center; color:var(--maroon); font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.35rem,4vw,1.9rem); line-height:1.45; letter-spacing:.01em;
+    }
+    .source-milestone span { display:block; font-size:.9rem; color:var(--gold); margin:4px 0; }
+    .gift-spotlight {
+      margin:34px auto 36px; padding:34px 22px 30px; max-width:590px; text-align:center;
+      border:1px solid rgba(112,40,63,.25); border-radius:22px;
+      background:linear-gradient(145deg,#f1e2dc,#ead7d0);
+      box-shadow:0 12px 32px rgba(65,39,43,.08);
+    }
+    .gift-spotlight .gift-you {
+      color:var(--maroon-dark); font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(3.6rem,12vw,6.2rem); line-height:1.05; letter-spacing:.03em;
+    }
+    .gift-spotlight p {
+      color:#493439; font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.1rem,3.5vw,1.45rem); line-height:1.5;
+      max-width:480px; margin:16px auto 0;
+    }
+    .moment-spotlight {
+      margin:30px 0 !important; padding:22px 24px; text-align:center;
+      border-top:1px solid rgba(112,40,63,.2); border-bottom:1px solid rgba(112,40,63,.2);
+      color:var(--maroon-dark) !important; font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.2rem,3.7vw,1.55rem); line-height:1.55;
+    }
+    .soul-spotlight {
+      color:var(--maroon) !important; font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.3rem,4vw,1.75rem); line-height:1.55; text-align:center;
+      margin:28px 0 !important;
+    }
+    .love-spotlight {
+      margin:38px auto !important; max-width:600px; padding:30px 18px;
+      text-align:center; border-radius:20px; border:1px solid rgba(112,40,63,.25);
+      background:linear-gradient(135deg,#6d263e,#542034);
+      color:#fff7f0 !important; font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.65rem,5.5vw,2.55rem); line-height:1.35;
+      box-shadow:0 12px 28px rgba(85,32,51,.14);
+    }
+    .promise-spotlight {
+      padding:24px 26px; margin:28px 0 !important; border-left:3px solid var(--maroon);
+      background:#f7efea; border-radius:0 16px 16px 0;
+      color:#493439 !important;
+    }
+    .quiet-spotlight {
+      text-align:center; color:var(--maroon) !important;
+      font-family:"Playfair Display",Georgia,serif; font-size:1.55rem;
+      margin:34px 0 !important;
+    }
+    .closing { text-align:center; border-color:rgba(112,40,63,.2); }
+    .closing h2 { color:var(--maroon); }
+    .signature {
+      color:var(--maroon-dark) !important; font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.6rem,5vw,2.2rem); text-align:center; margin:32px 0 24px !important;
+    }
+    .gratitude { color:var(--maroon) !important; font-weight:700; text-align:center; font-size:1.2rem; }
+    footer { text-align:center; color:#8c7b78; padding:0 18px 38px; font-size:.76rem; letter-spacing:.04em; }
+    @media(max-width:560px) {
+      .hero { min-height:74vh; padding:64px 0 52px; }
+      .letter { border-radius:20px; padding:27px 23px; }
+      body { line-height:1.82; }
+      .chapter-number { top:16px; right:17px; width:33px; height:33px; font-size:.95rem; }
+      .gift-spotlight { padding:30px 15px 25px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner wrap">
+      <span class="pill">A letter, a prayer, a promise</span>
+      <h1>One Month,<br>A Thousand Prayers,<br>One Forever</h1>
+      <p>Some feelings take time to find their words. Some prayers take time to find their way. And some people become the answer you never want to stop being grateful for.</p>
+      <div class="date">25 · 11 · 2026</div>
+      <div class="heart">♡</div>
+      <div class="scroll">A story written from the heart<span>↓</span></div>
+    </div>
+  </header>
+  <main class="wrap">
+    
+    <section class="letter opening" id="chapter-1">
+      <div class="chapter-number">01</div>
+      <p class="eyebrow">A Letter From My Heart</p>
+      <h2>One month since I found the courage to tell you everything</h2>
+      <div class="letter-copy">
+        <p class="letter-greeting">Hello My Beautiful Woman,</p>
+<p>As you know today is 25/11/2026, exactly a month ago ,I wrote you a letter expressing what I feel about you, how important you are to me and why I care for you so much.</p>
+<p>Exactly 1 month adhi mi tula mjhe mantaley sagle sangtlele , ani te majhya manat khup diwasa pasun hotey, halu halu sagle build hot gelele ani eka point la te mala realize jhal ki nai he sagle tula sangtley pahijey ek tri life mdhey chance ghetley pahijey, karan tujha sarkhey person mla kdhe nntr bhetu shakla nasta, you are my treasure, you are gifted to me by universe, written by destiny and blessed by Bappa, Swami and every other energy.</p>
+<p>Tula maiti toh letter lihachey kadhi majhe dokyat ale he mala samjley sudha nai , te ase hotey ki sagle aapopaap ghadat gel, mi vichar krt hoto tula sangyala haave, nav ratri ch time hotey tya veles, ani maiti nai majhyat kuthun ti enegry ali , mla ase jhal ki je kahi ahe manat te lihun tula nit sangav , je kharr ahe te , je manat vatete te, je tu majha sathi ahes te , ani he sagle lihtana mi ha vichar nvhtey kel ki pudhey kay hoil , mla bas tula sagle sangachey hotey ani mala tu dusrey kahi nai tr bas nit haavi hoti.</p>
+<p>Bas mg lihyala suru kel, sagle ghosti aatvalya kase bhetlo, kase apli friendship vadli, kase eikmikana bolat gelo, kase roj ch aple share krt gelo, kase eikmik ch care kart gelo, kase tu mjhe vr trust kelas ani mala tujha aat je hotey te tu sangat geli, ani he sagle hot astana ek veglech bond create jhal ani u become the most important person of my life , the one who I care about a lot, the one whose smile is my everything, the one who has become my lifeline, the one who is mine and I promised to universe I will always hold her hand no matter what and be with her in her every phase .</p>
+<p>Mi jevha he sagle lihat hoto, tevha majhyat ek energy hoti, ek vishwas hota, ki tula he sagle kalel , bas he maiti hotey ki veel lagel but tula he sagle kalel ani tu samjun gheshil. Mi tharvaley hotey ki mi he sagle tul sangil ani mi tula sagle tuje way ni handle kru denar, tula tujha time jo haave toh denar ani mi wait krnr , bas mala tu na nit hasat haavi hoti ani dusrey kahi nai, mi tujha var khup jast prem karto, agadi jev ahe majhe tujhyat, tujhe awaj jari change jhal na mala kase tri hotey, itkey jev ahe tujhyat, so he mala maiti hotey ki tula mjhe prem nakkich kalel bas veel lagel.</p>
+      </div>
+    </section>
+    <section class="letter" id="chapter-2">
+      <div class="chapter-number">02</div>
+      <p class="eyebrow">The Prayers I Carried</p>
+      <h2>Every Thursday, every prayer, and every hope I left with Bappa and Swami</h2>
+      <div class="letter-copy">
+        <p>Mi letter tula dilya var pudhchey 2 diwas tu shant hoti, tujhe manat khup saare vichar chalele ani te mala maiti hotey, mhnun mi tharvelele ki je ahe te shantpane karu ani patience ni karu, veel gela apan halu halu tya topic var bolyala laglo, tu mala samjvayla lagli , karan tula mala bilkul hurt krchey nvhtey, tu majhi khup kalji krtes he mala maiti ahe, but majhe pn ase hotey ki mla maiti ahe tujhe manat barech kahi chalu ahe, te tu shant kar ani nntr mg apan vichar karu, dusrey kahi nako.</p>
+<p>Ani kuth na kuth he khatri hoti ki tu tujhe manatli fight jinkshil ani tula mjhe prem kalel bas tula time dyav lagel , tula maiti mi last 2 months mdhe tula mjhe every prayer mdhey magtley ahe , mi mjhe purn jiv lavun taklele tula deva la magyala , mi bilkul patience theun pray karacho, ki deva please tila shant kar, ticha manat khup kahi ahe , please tila ek marg dkahav, ti khup sadhi ahe , please tichey kalji ghey ani please tila halu halu hyatun baher kad ani please mla ticha sobat nehmi rahu de.</p>
+<p>Swami kade jayecho ani ekach sangacho, swami ti tumcha kade khup maana ni every Thursday na chukta yetey, swami please tila shant kara, please ticha manat je kahi ahe, te sort kara, tila takat dya ani tichey jya kahi icha astel te purn kara ani jamel tr tila majhe ayushyat sopva mi promise karto tila nehmi japun thevin, ticha hath kadhi sodnar nai ani ticha sathi mla je karaw lagel te sagle karil ani tila nehmi sobat geun chalil , bas mala itkech takat dya mi tila nit samjun ghey shaku ani nehmi amhala marg dakhva.</p>
+<p>Ani mi sagle Swami vr sodlele , mi mntlele mi tumhala khup maana pasun magtley ahe, please majhe he shakye kara, please sagle nit kara ani please mjhe ayushyat tila dya.</p>
+      </div>
+    </section>
+    <section class="letter" id="chapter-3">
+      <div class="chapter-number">03</div>
+      <p class="eyebrow">The Moments That Brought Us Closer</p>
+      <h2>The meetings, the patience, and the birthday I wanted to spend with you</h2>
+      <div class="letter-copy">
+        <p>Bas mg , apan bhetlo 2 da , first time tr apan ghai mdhey hoto, tevha tu mala samjvaley, mi aikley sagle ani tula samor bghun mi ajun tujhya premat padlo, dusryan da bhetlo tevha mla tula saari mdhe bgchech hotey mjhe khup maan hotey ani mla tu bhetli, khup sundar hota toh shaan, tujhe manat tevha barech kahi hotey, kuth na kuth tula mjhe badal vatet pn hotey but tujhe manat je chalele te aatun tula trass det hotey, mala te sagle kalale, mi tujhe doole pusney, tuje hath padkun theun tujhe sagle aikney, he majha sathi khup special moment hotey, ani he sagle hot astana mjhe pn dolyat pani ale ani mi te nai control karu shaklo, mla tujhe samor kahich lapavata nai yet, kay maiti ase ka, tula mjhe dolyat paani bghun kharr tr khup kalji jhali majhi, apan pudhey nighalo, tula mi sodley ani mi tula jatana, mala tula hug krchey ase kanat bolo, tya vele la tula ase jhal ki nakki kay chalay tuje sobat, ani kharr sangu tr jya vele la apan doghe bolat hoto , tu mjhe dolyat bghun gheteles ki mi tujhe vr kiti prem karto ani toh kiti khara ahe, tu jat astana tujhe manat khup kahi chalele, mi thambun tula jatana nit bgt hoto, tula observe kart hoto, mi tula kahich bolo nai karan mala tula sagle aapop hou dyachey hotey ani kuth na kuth feel zalele ki halu halu tula kalale lagley ahe ani tu halu halu samjashil sagle , te sagle mjhe sathi beautiful hotey.</p>
+<p>Tya nntr apan bolat Rahelo, tu khup try kel mala samjvachey karan tula mala bilkul hurt krchey nvhtey, ani mi khup patience theun bas tu halu halu samjun ghav itkey magat gelo.</p>
+<p>Pudhey kahi diwasat majha birthday hota ani mla toh maana pasun tujhe sobat ghalvachey hota, ani mala tula ase nit sangachey hotey, so mi try kel tula lihun sangachey sagle ani te chan jhal, tula pathavley, tujhe manat adhich barech kahi chalele ani tyat mjhe bday, but tula pn mjhe sobat yache hotey tu tr adhich bhetnar hotey, tu shant dokk theun vichar kela ani Mjhe sobat mjhe bday spent kryala ho boli, you known mi itka happy hoto, like mi majhya ayushyat first time mjhe maana pasun mala jase haavey tase bday krnr hoto with the person whom I love the most !</p>
+      </div>
+    </section>
+    <section class="letter" id="chapter-4">
+      <div class="chapter-number">04</div>
+      <p class="eyebrow">14/11/2026 · The Magical Day</p>
+      <h2>The moment given by God, written by the universe, and lived by us</h2>
+      <div class="letter-copy">
+        <div class="source-milestone">14/11/2026 : The Magical Day</div>
+<p>Survat keli, hasat khelat, tu mala wish keley , ani apan jat astana , khup unn lagat hoti mhnun mi gadi thambaveli ani tya break mdhey je jhal toh shaan universe ni lihelela hota, toh itka magical hota, tya shanat itkey purneness hotey, tu mala shirt dilas , mjhe dolyat paani ale ani apan mg bolat baslo, bolata bolata itkey close alo ani mi tula mjhe mithit ghetley ani tu tuje aatun tujhe manat je hotey te clear kel ani mala accept kel .</p>
+<p class="moment-spotlight">This was the moment given by god, written by universe and lived by us with our whole heart.</p>
+<p>Toh moment mjhe life mdhle sagylat jast important moment ahe , mla ajun pn dolya samor toh moment disto ani toh nehmi disel.</p>
+<p class="soul-spotlight">The moment when I meet Pooja with all her heart , the one whom I love with all my heart, my lifeline, my world !!</p>
+      </div>
+    </section>
+    <section class="letter" id="chapter-5">
+      <div class="chapter-number">05</div>
+      <p class="eyebrow">The Gift I Had Been Praying For</p>
+      <h2>A hand held, a blessing felt, and a person I could call mine</h2>
+      <div class="letter-copy">
+        <p>Ani tya pudhey sagle magical hote gel, siddhivinayak temple ch bappa ch darshan, tith tr deva ni mala direct sangun del, tujhe manatley purn keley mi, tu jya way ni mjhe hath pakadlela , ji energy hoti tujyat, toh hakk, ti care , toh prem, deva ni ghadvelela toh shaan.</p>
+<p>Tya moment la kalale ki deva ni diley mala magtlele ani sangtley ahe diley tula tujhe prem, bas ata kalji ghey ani japun thev tila , nehmi hath pakdun thev ticha ani ahe mjhe tumchya var aashirwad ahe ja pudhey !!!!</p>
+<p>Ani Hya Moment la mala majha life ch sagylat important person milale</p>
+<p>Te pn deva kadun, universe ni anlele ghadvun sagle.</p>
+<div class="gift-spotlight">
+<p class="gift-you">You !!!!!</p>
+<p>The gift for all my birthday”s , the person with whom now I will spent my every birthday.</p>
+</div>
+<p>Kiti special astat na kahi moments , tujhe te hath dharney mla ajun pn feel hotey, tya moment la mjhe mdhey ek sukoon ala, ek shantpana ala ani mi khup happy zalo, I got the person who now I can say mine forever, no matter what happens.</p>
+      </div>
+    </section>
+    <section class="letter" id="chapter-6">
+      <div class="chapter-number">06</div>
+      <p class="eyebrow">A Bond I Promise to Keep</p>
+      <h2>The little moments, the trust, and the decision to keep choosing each other</h2>
+      <div class="letter-copy">
+        <p>Tya nntr apan jevan kel ani pudhey worli la gelo, ani halu halu apan close yet gelo ani eikmikachey premat padat gelo, te worli seaface la aple basun eikmik la mithi marney ani eikmik vr trust karney khup important moment hota, it was all magical and beyond words.</p>
+<p>Ani pudhey je kahi ghadley , te sagle manjey purely deva ni dilele ahe, apan jashe premat padloy, apan jya way ni jawal aloy, apan jya way ni eikmik vr trust kryala lagloy, ani jya way ni understand karto eikmik la, aple eikmik sathi odh, he sagle khup special ahe.</p>
+<p class="promise-spotlight">Ani he sagle asach rahnar nehmi, mi nehmi aple relation japnar ahe, kahi hi hou de, problems yetil but mi tujha hath kadhi sodnar naiye, bhandu, raagvu, but shevti jawal yeun, tight hug karun, sagle bolun sort karu.</p>
+<p class="quiet-spotlight">Bas itkech haavey mala .</p>
+      </div>
+    </section>
+    <section class="letter closing" id="chapter-7">
+      <div class="chapter-number">07</div>
+      <p class="eyebrow">Thank You for Everything</p>
+      <h2>For the person I prayed for, the future I dream of, and every moment still waiting for us</h2>
+      <div class="letter-copy">
+        <p>Ani hya saglya sathi mi deva la khup maana pasun thank you boltoy</p>
+<p>He je kahi ghadvun anle ahe deva ni te soope nvhtey, khup special ahe sagle he.</p>
+<p>Deva ni mala jo person diley, tyala mi nehmi japun thevnar, toh person majhe sathi khup important ahe, ticha mdhe mi Mjhe future bgto, tila mi mjhe life ch sagylat important person kel ahe, je nehmi mjhe sobat rahil ani majha sath deyil , my better half , my partner , love of my life , the most beautiful woman of my life whom I love from all my heart in every situation and will take care of her till my last breath .</p>
+<p>To the woman who is my partner, who will be the beautiful mother to my child , the one who will take care of everything in my life, the one who will guide me in everything I do, the one who will understand in every situation, the one who will make my family .</p>
+<p class="love-spotlight">I love you to infinity and beyond !!!!</p>
+<p>Apan sagle halu halu nit karu, apan sagle plan karu, tujhe dreams, majhe dreams, sagle purn karu, doghanchey family chi care karu, sagylana happy theu ani apan eikmik la geun happy rahu, mi tula every stage of life support krnr ahe, kuthlich ghost ektey karu denar nai , je ahe te doghanchey , te sukh aso kevha dukh ektey kahich nai, mi jo hath dharla ahe, toh hath nehmi tasach ghat pakdun rahnar , tula kay krchey te tu kar bindass, mi ahe, mala tula khup pudhey jatana pahichey ahe, hasat khedat sagle kartana pahichey ahe, jo tujhe face var ch glow ani happiness ahe na toh nehmi mi tasach japun thevnar ani tujhi purn maana pasun kalji ghenar kuth kahi kami padu denar nai, ani prem tr tula maitich ahe mi kiti karto tujhe var, tu majha jiv ahes , mjhe sagle tujhyat ahe , lagne karu tevha tula mi hakka ni byko bolil pn tu atach majhi sagle zali ahes !</p>
+<p class="signature">Forever your”s my beautiful !</p>
+<p class="gratitude">Thank you for everything !!</p>
+      </div>
+    </section>
+  </main>
+  <footer>Written with a grateful heart. For my beautiful woman. ❤️</footer>
+  <script data-goatcounter="https://anurag-webdev.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
